@@ -1,0 +1,8 @@
+#!/bin/bash
+# copyright ©️ 2022 - Black Bug Group
+# Author: Edgar Nyandoro - Github: Major2000
+
+
+
+PROJDIR="$(dirname "$0")"
+cd "${PROJDIR}" || return
