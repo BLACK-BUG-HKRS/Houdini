@@ -3,7 +3,6 @@
 # Author: Edgar Nyandoro - Github: Major2000
 
 
-
 PROJDIR="$(dirname "$0")"
 cd "${PROJDIR}" || return
 
