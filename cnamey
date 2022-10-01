@@ -27,7 +27,7 @@ Help()
 
    echo "           -f, -F     Add a custom brute-force world list of domains"
 
-   echo "           -o, -O     Print to  external file"
+#    echo "           -o, -O     Print to  external file"
 
    echo "           -h, -H     Print this Help."
 
