@@ -143,4 +143,11 @@ else
                 ;;
         esac
     done
-fi 
+fi
+
+
+
+## Dangling starts here 
+while read sub; do
+    if host -t CNAME "$sub.$domain" &> /dev/null; then
+        echo "$sub.$domain"
