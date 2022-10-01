@@ -7,8 +7,6 @@ PROJDIR="$(dirname "$0")"
 cd "${PROJDIR}" || return
 
 
-
-
 # Help function
 Help()
 {
@@ -41,9 +39,6 @@ Help()
   
    echo
 }
-
-
-
 
 
 
@@ -157,4 +152,42 @@ while read sub; do
     if ! host cname &> /dev/null; then
         echo "$cname did not resolve ($sub.$domain)"
     fi
-done
+done < $file
+
+
+
+
+
+
+
+Help()
+{
+   # Display Help
+   echo
+
+   echo "Looks like you're lost, This HELP Message is enough for the guide!"
+
+   echo
+
+   echo "Syntax: spydomains  -[options:|u, U|f, F|o, O|h, H]  [args]"
+
+   echo
+
+   echo "options:"
+
+   echo "           -u, -U     Add the domain you want to brute force for subdomains."
+
+   echo "           -f, -F     Add a custom brute-force world list of domains"
+
+   echo "           -o, -O     Print to  external file"
+
+   echo "           -h, -H     Print this Help."
+
+   echo
+   
+   echo  "Example: spydomains -u example.com -f wordlist.txt -o domains.txt  - With word list"
+
+   echo  "Example: spydomains -u example.com - without word list"
+  
+   echo
+}
