@@ -35,7 +35,7 @@ Help()
    
 #    echo  "Example: spydomains -u example.com -f wordlist.txt -o domains.txt  - With word list"
 
-   echo  "Example: spydomains -u example.com - without word list"
+   echo  "Example: spydomains -u example.com -f filename"
   
    echo
 }
