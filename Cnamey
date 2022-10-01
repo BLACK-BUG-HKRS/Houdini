@@ -6,3 +6,10 @@
 
 PROJDIR="$(dirname "$0")"
 cd "${PROJDIR}" || return
+
+
+if [[ -z "$1" || "$#" == 0 ]]; then
+    echo
+    echo "No option(s)!"
+    echo "Try -h option for HELP!"
+    exit
