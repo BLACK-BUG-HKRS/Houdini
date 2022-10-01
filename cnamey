@@ -59,7 +59,7 @@ if [[ -z "$1" || "$#" == 0 ]]; then
 
 else 
 
-    while getopts "hHu:U:o:O:f:F:" option; do
+    while getopts "hHu:U:f:F:" option; do
         case $option in
             h | H)
                 Help
@@ -108,26 +108,26 @@ else
                 done
                 ;;
 
-            o | O)
-                for i in $@; do
-                    # echo $i
-                    # echo $opos
-                    let "opos++"
-                    if [[ $i == "-o" || $i == "-O" ]]; then
-                        let "opos++"
-                        case $opos in
-                            2) out=$2;;
-                            3) out=$3;;
-                            4) out=$4;;
-                            5) out=$5;;
-                            6) out=$6;;
-                            7) out=$7;;
-                            8) out=$8;;
-                            9) out=$9;;
-                        esac
-                    fi
-                done
-                ;;
+            # o | O)
+            #     for i in $@; do
+            #         # echo $i
+            #         # echo $opos
+            #         let "opos++"
+            #         if [[ $i == "-o" || $i == "-O" ]]; then
+            #             let "opos++"
+            #             case $opos in
+            #                 2) out=$2;;
+            #                 3) out=$3;;
+            #                 4) out=$4;;
+            #                 5) out=$5;;
+            #                 6) out=$6;;
+            #                 7) out=$7;;
+            #                 8) out=$8;;
+            #                 9) out=$9;;
+            #             esac
+            #         fi
+            #     done
+            #     ;;
 
             *)
                 echo
